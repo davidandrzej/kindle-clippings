@@ -111,8 +111,8 @@ for directory, subdirlist, filelist in os.walk(outpath):
 
 print('Found', len(existing_hashes), 'existing note hashes')
 print('Processing clippings file', infile)
-        
-mc = open(infile, 'r')
+
+mc = open(infile, encoding='utf-8', errors='ignore')
 
 mc.read(1)  # Skip first character
 
